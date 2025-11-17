@@ -1,65 +1,12 @@
 import { Clock, ChevronRight } from 'lucide-react';
+import { promos } from '../datas/promoData';
 
-const promos = [
-  {
-    id: 1,
-    image: 'https://images.unsplash.com/photo-1497534547324-0ebb3f052e88?w=400&h=300&fit=crop',
-    badge: 'food',
-    title: 'Blu Shaak - Bonus Soft Ice Cream Setiap Rabu',
-    period: 'Periode 17 Nov 2025 - 31 Mei 2026',
-  },
-  {
-    id: 2,
-    image: 'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400&h=300&fit=crop',
-    badge: 'food',
-    title: 'Food Fair Mal Ciputra Semarang - Dapatkan Voucher',
-    period: 'Periode 15 Nov 2025 - 31 Des 2025',
-  },
-  {
-    id: 3,
-    image: 'https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=400&h=300&fit=crop',
-    badge: 'food',
-    title: 'Xpress Mart Tarakan - Dapatkan Gula Pasir 1 Kg',
-    period: 'Periode 15 Nov 2025 - 31 Jan 2026',
-  },
-  {
-    id: 4,
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop',
-    badge: 'travel',
-    title: 'Mastercard Contactless Bali - Dapatkan Voucher',
-    period: 'Periode 07 Okt 2025 - 30 Nov 2025',
-  },
-  {
-    id: 5,
-    image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&h=300&fit=crop',
-    badge: 'hobby',
-    title: 'Seminggu Kopitiam Medan - Potongan Rp30.000',
-    period: 'Periode 01 Des 2025 - 31 Jan 2026',
-  },
-  {
-    id: 6,
-    image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=300&fit=crop',
-    badge: 'hobby',
-    title: 'QQ Kopitiam - Diskon 15% Setiap Senin',
-    period: 'Periode 10 Nov 2025 - 09 Des 2026',
-  },
-  {
-    id: 7,
-    image: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&h=300&fit=crop',
-    badge: 'Hotel',
-    title: 'Cambridge Hotel - Diskon Rp100 Ribu',
-    period: 'Periode 07 Nov 2025 - 30 Des 2025',
-  },
-  {
-    id: 8,
-    image: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&h=300&fit=crop',
-    badge: 'intertaiment',
-    title: 'Kopitiam - Penawaran Spesial (Diskon 15% dan Cashback)',
-    period: 'Periode 17 Nov 2025 - 31 Mei 2026',
-  },
-];
 
 export default function App() {
+  const randomPromos = [...promos]
+  .sort(() => Math.random() - 0.5)
+  .slice(0, 8);
+
   return (
     <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -80,7 +27,7 @@ export default function App() {
 
         {/* Promo Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {promos.map((promo) => (
+          {randomPromos.map((promo) => (
             <div
               key={promo.id}
               className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer"
