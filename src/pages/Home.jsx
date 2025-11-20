@@ -1,11 +1,16 @@
 import { Clock, ChevronRight } from 'lucide-react';
 import { promos } from '../datas/promoData';
+import { useEffect } from 'react';
 
 
 export default function App() {
   const randomPromos = [...promos]
   .sort(() => Math.random() - 0.5)
   .slice(0, 8);
+
+  useEffect(()=> {
+    window.userInterest = "hobby";
+  }, [])
 
   return (
     <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
@@ -42,7 +47,7 @@ export default function App() {
                 {/* Badge */}
                 <div className="absolute top-3 left-3 bg-white rounded-full w-12 h-12 flex items-center justify-center shadow-md">
                   <span className="text-xs font-semibold text-gray-700">
-                    {promo.badge}
+                    {promo.category}
                   </span>
                 </div>
               </div>
