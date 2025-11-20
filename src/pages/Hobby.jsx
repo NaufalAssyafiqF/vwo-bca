@@ -7,7 +7,7 @@ export default function Hobby() {
     VWO.visitor = VWO.visitor || function () {VWO.push(["visitor"].concat([].slice.call(arguments)))};
   
     // Replace "<text_value>" with your actual attribute value
-    VWO.visitor({ "user_interest": "food" });
+    VWO.visitor({ "user_interest": "hobby" });
   }, [])
 
   return <h1>Ini halaman Hobby Promo</h1>;
