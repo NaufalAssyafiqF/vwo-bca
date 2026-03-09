@@ -6,7 +6,8 @@ import Travel from "./pages/Travel";
 import Hobby from "./pages/Hobby";
 import Food from "./pages/Food";
 import Fashion from "./pages/Fashion";
-import Case1 from "./pages/case1";
+import Case1 from "./pages/Case1";
+
 
 function App() {
   return (
