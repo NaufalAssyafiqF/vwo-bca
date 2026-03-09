@@ -29,7 +29,7 @@ const Case1 = () => {
           {randomPromos.map((promo) => (
             <div
               key={promo.id}
-              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+              className="my-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer"
               onClick={()=>alert("promo di click")}
             >
               {/* Image Container */}
