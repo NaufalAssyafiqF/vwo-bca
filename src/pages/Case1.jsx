@@ -30,6 +30,7 @@ const Case1 = () => {
             <div
               key={promo.id}
               className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+              onClick={()=>alert("promo di click")}
             >
               {/* Image Container */}
               <div className="relative h-48 overflow-hidden">
