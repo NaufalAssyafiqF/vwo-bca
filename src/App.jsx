@@ -10,6 +10,8 @@ import Case1 from "./pages/Case1";
 import Case2 from "./pages/Case2";
 import DetailCase2 from "./pages/DetailCase2";
 import Case3 from "./pages/Case3";
+import Case4 from "./pages/Case4";
+import DetailCase4 from "./pages/DetailCase4";
 
 
 function App() {
@@ -25,6 +27,8 @@ function App() {
         <Route path="/case2" element={<Case2 />} />
         <Route path="/case2/detail" element={<DetailCase2 />} />
         <Route path="/case3" element={<Case3 />} />
+        <Route path="/case4" element={<Case4 />} />
+        <Route path="/case4/detail" element={<DetailCase4 />} />
       </Routes>
     </>
   );
