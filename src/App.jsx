@@ -7,6 +7,7 @@ import Hobby from "./pages/Hobby";
 import Food from "./pages/Food";
 import Fashion from "./pages/Fashion";
 import Case1 from "./pages/Case1";
+import Case2 from "./pages/Case2";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/food" element={<Food />} />
         <Route path="/fashion" element={<Fashion />} />
         <Route path="/case1" element={<Case1 />} />
+        <Route path="/case2" element={<Case2 />} />
       </Routes>
     </>
   );
